@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Прогноз соотношения матрица-наполнитель</title>
+      <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+ <div class="login">
+    <h1>Рекомендация соотношения матрица-наполнитель</h1>
+    <form action="" method="post">
+	    <input type="text" name="dens" placeholder="Плотность, кг/м3" required>
+	    <input type="text" name="elast" placeholder="Модуль упругости, ГПа" required>
+	    <input type="text" name="hard" placeholder="Количество отвердителя, м.%" required>
+	    <input type="text" name="epoxy" placeholder="Содержание эпоксидных групп,%_2"  required>
+	    <input type="text" name="temp" placeholder="Температура вспышки, С_2" required>
+	    <input type="text" name="surf" placeholder="Поверхностная плотность, г/м2" required>
+	    <input type="text" name="mod" placeholder="Модуль упругости при растяжении, ГПа" required>
+	    <input type="text" name="tens" placeholder="Прочность при растяжении, МПа" required>
+	    <input type="text" name="tar" placeholder="Потребление смолы, г/м2" required>
+	    <input type="number" name="angle" placeholder="Угол нашивки, град" min='0' max='360' required>
+	    <input type="text" name="step" placeholder="Шаг нашивки" required>
+	    <input type="text" name="denn" placeholder="Плотность нашивки" required>
+	<p>
+	    <button type="submit" class="btn btn-primary btn-block btn-large">Рассчитать</button>
+	</p>
+        <h1>{{message}}<h1>
+ </div>
+</body>
+</html>
